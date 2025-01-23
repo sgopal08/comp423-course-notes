@@ -1,13 +1,13 @@
 site_name: COMP423 Course Notes
 theme:
   name: material
-    features:
+  features:
     - content.code.copy
     - content.code.select
     - content.code.annotate
   icon: 
-    admonition:
-      logo: 'material/cat'
+  admonition:
+    logo: 'material/cat'
   
 
 markdown_extensions:
@@ -21,4 +21,3 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  
