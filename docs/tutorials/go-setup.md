@@ -28,17 +28,19 @@ git init
 ```
 
 ## Step 2: Add Development Container Configuration
-1. Open the comp423-go-tutorial directory in VS Code:
+1. Open the `comp423-go-tutorial` directory in VS Code:
     * Go to File > Open Folder and select your project directory.
 2. Install the Dev Containers extension:    
     * Open the Extensions Marketplace (Ctrl+Shift+X), search for "Dev Containers," and install it.
-3. Create a .devcontainer directory in the project root:
+3. Create a `.devcontainer` directory in the project root:
 ```
 mkdir .devcontainer
 ```
 !!! tip "Tip: "
     You can also create a new file through VSCode's Explorer panel.
-4. Inside the .devcontainer directory, create a devcontainer.json file with the following content:
+
+4. Inside the `.devcontainer` directory, create a `devcontainer.json` file with the following content:
+
 ```
 {
   "name": "COMP423 Go Tutorial",
@@ -68,14 +70,14 @@ mkdir .devcontainer
 ## Step 4: Verify Go Installation
 1. Open a terminal inside the container and run:
 ```
-go version
+go --version
 ```
-!!! note "Look Out"
-    Make sure it outputs a recent Go version! (i.e. Such as go version go1.xx.xx linux/amd64.)
+!!! bug "Look Out"
+    Make sure it outputs a recent Go version! (i.e. Such as go version ex. Go 1.23)
 
 
 
-## Step 5: Create a "Hello COMP423" Program
+## Step 5: Create a **Hello COMP423** Program
 1. Create a new file `main.go` in the project root with the following content:
 ```
 package main
@@ -97,26 +99,26 @@ go mod tidy
 ```
 go run main.go
 ```
-!!! note "Did you know?"
+!!! question "Did you know?"
     This command compiles and runs the program in a single step!
 
 
-1. Build the Go program:
+2. Build the Go program:
 
 ```
 go build -o hello_comp423 main.go
 ```
-This generates an executable binary named hello_comp423.
+This generates an executable binary named `hello_comp423`.
 
 ```
 ./hello_comp423
 ```
-1. Unlike go run, the compiled binary does not need the Go environment to execute.
+3. Unlike go run, the compiled binary does not need the Go environment to execute.
 
 ### Explanation of Commands
-`go run`: Compiles and runs the program temporarily without generating an executable file.
+* `go run`: Compiles and runs the program temporarily without generating an executable file.
 
-`go build`: Compiles the source code and produces a standalone binary, similar to using gcc for C programs.
+* `go build`: Compiles the source code and produces a standalone binary, similar to using gcc for C programs.
 
 **Running the binary:** Executes the compiled program without involving the Go runtime directly.
 
