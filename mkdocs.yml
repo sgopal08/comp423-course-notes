@@ -5,6 +5,9 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+  icon: 
+    admonition:
+      logo: 'material/cat'
   
 
 markdown_extensions:
@@ -14,4 +17,7 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
