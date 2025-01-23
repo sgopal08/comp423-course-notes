@@ -16,13 +16,13 @@ Before getting started, ensure you have the following installed on your system:
     * Go (Made by the Go Team at Google)
 
 ## Step 1: Create a New Project Directory
-1. Open the terminal and create a new directory for your project:
+Open the terminal, create a new directory for your project, and switch into the directory:
 ```
 mkdir comp423-go-tutorial
 cd comp423-go-tutorial
 ```
 
-2. Initialize a new Git repository:
+Initialize a new Git repository:
 ```
 git init
 ```
@@ -39,7 +39,7 @@ mkdir .devcontainer
 !!! tip "Tip: "
     You can also create a new file through VSCode's Explorer panel.
 
-4. Inside the `.devcontainer` directory, create a `devcontainer.json` file with the following content:
+Inside the `.devcontainer` directory, create a `devcontainer.json` file with the following content:
 
 ```
 {
@@ -68,9 +68,9 @@ mkdir .devcontainer
 2. Wait for the container to build and start.
 
 ## Step 4: Verify Go Installation
-1. Open a terminal inside the container and run:
+Open a terminal inside the container and run:
 ```
-go --version
+go version
 ```
 !!! bug "Look Out"
     Make sure it outputs a recent Go version! (i.e. Such as go version ex. Go 1.23)
@@ -78,32 +78,32 @@ go --version
 
 
 ## Step 5: Create a **Hello COMP423** Program
-1. Create a new file `main.go` in the project root with the following content:
+Create a new file `hello.go` in the project root with the following content:
 ```
 package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Hello COMP423")
+    fmt.Println("Hello COMP423!")
 }
 ```
-2. Initialize the Go module:
-```
-go mod tidy
-```
+
+!!! question "What is this code doing?"
+    First it declares a main package (a package is a way to group functions, and it's made up of all the files in the same directory). Then it imports the fmt package, which contains functions for formatting text, including printing to the console. This package is one of the standard library packages you got when you installed Go. Lastly, we implement a main function to print a message to the console. A main function executes by default when you run the main package.
 
 ## Step 6: Running and Building the Go Program
 
-1. Run the Go program directly:
+Run the Go program directly, you should also get the same output below:
 ```
 go run main.go
+Hello COMP423!
 ```
-!!! question "Did you know?"
+!!! note "What does run do?"
     This command compiles and runs the program in a single step!
 
 
-2. Build the Go program:
+Build the Go program:
 
 ```
 go build -o hello_comp423 main.go
@@ -113,9 +113,9 @@ This generates an executable binary named `hello_comp423`.
 ```
 ./hello_comp423
 ```
-3. Unlike go run, the compiled binary does not need the Go environment to execute.
+Unlike go run, the compiled binary does not need the Go environment to execute.
 
-### Explanation of Commands
+### Difference Between `go run` and `go build`
 * `go run`: Compiles and runs the program temporarily without generating an executable file.
 
 * `go build`: Compiles the source code and produces a standalone binary, similar to using gcc for C programs.
